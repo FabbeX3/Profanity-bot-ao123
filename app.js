@@ -22,7 +22,7 @@ bot.on("message", message =>
     // Profanity filter test
     for(x = 0; x < profanities.length; x++)
     {
-        if(message.content.toLowerCase() == profanities[x].toLowerCase())
+        if(message.content.toUpperCase().includes(profanities[x].toUpperCase()))
       {
           const embed =  new Discord.RichEmbed()
           .setTitle("Warning!!!")
@@ -30,7 +30,8 @@ bot.on("message", message =>
           .setColor(16711680)
           .addField(`@${message.author.username} said something suspicious in: #${message.channel.name}`, `The message was: ${message.content}`)
           .setTimestamp()
-          bot.channels.get("423128277327020033").send({embed});
+          bot.channels.get("422852036854546432").send({embed});
+          return;
       }
     }
 });
