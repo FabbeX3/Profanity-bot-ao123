@@ -2,9 +2,9 @@
   "name": "Profanity Bot AO",
   "description": "Discord profanity bot that is always online",
   "version": "0.0.0",
-  "main": "bot.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node bot.js"
+    "start": "node index.js"
   },
   "dependencies": {
     "discord.js": "11.3.2",
