@@ -25,10 +25,10 @@ bot.on("message", message =>
         if(message.content.toUpperCase().includes(profanities[x].toUpperCase()))
       {
           const embed =  new Discord.RichEmbed()
-          .setTitle("Warning!!!")
+          .setTitle("🚫 Warning 🚫")
           .setAuthor("Profanity Bot")
           .setColor(16711680)
-          .addField(`@${message.author.username} said something suspicious in: #${message.channel.name}`, `The message was: ${message.content}`)
+          .addField(`📩 @${message.author.username} said something suspicious in: #${message.channel.name}`, `📝 The message was: ${message.content}`)
           .setTimestamp()
           bot.channels.get("423128277327020033").send({embed});
           return;
